@@ -4,15 +4,77 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Laravel + React server side rendering example</title>
-        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-        <script defer src="{{ mix('js/react/entry-client.js') }}"></script>
-    </head>
-    <body class="bg-paper font-sans leading-normal text-grey-darkest border-t-4 border-orange-light">
-        {!! ssr('js/react/entry-server.js')
-            ->fallback('<div id="app"></div>')
-            ->render() !!}
 
-       <script src="https://gist.github.com/lalitmee/a562d812e50672761217ace0242ea98b.js"></script>
+        <title>Laravel</title>
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+
+        <!-- Styles -->
+        <style>
+            html, body {
+                background-color: #fff;
+                color: #636b6f;
+                font-family: 'Raleway', sans-serif;
+                font-weight: 100;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .top-right {
+                position: absolute;
+                right: 10px;
+                top: 18px;
+            }
+
+            .content {
+                text-align: center;
+            }
+
+            .title {
+                font-size: 68px;
+            }
+
+            .links > a {
+                color: #636b6f;
+                padding: 0 25px;
+                font-size: 12px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+
+            .m-b-md {
+                margin-bottom: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex-center position-ref full-height">
+            <div class="content">
+                <div class="title m-b-md">
+                    Laravel Server Side <br> Rendering Examples
+                </div>
+                <div class="links">
+                    <a href="{{ url('vue') }}">Vue</a>
+                    <a href="{{ url('react') }}">React</a>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

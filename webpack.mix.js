@@ -15,6 +15,9 @@ const PurgecssPlugin = require('purgecss-webpack-plugin');
  */
 
 mix
+    .js('resources/assets/js/vue/entry-client.js', 'public/js/vue')
+    .js('resources/assets/js/vue/entry-server.js', 'public/js/vue')
+
     .react('resources/assets/js/react/entry-client.js', 'public/js/react')
     .react('resources/assets/js/react/entry-server.js', 'public/js/react')
 

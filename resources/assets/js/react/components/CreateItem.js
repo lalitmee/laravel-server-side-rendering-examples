@@ -1,7 +1,7 @@
 // CreateItem.js
 
 import React, { Component } from 'react';
-import { Router, Link } from 'react-router';
+import { Router, Link } from 'react-router-dom';
 import {
     Item,
     Card,
@@ -27,7 +27,7 @@ class CreateItem extends Component {
     }
 
     componentDidMount() {
-        fetch('https://seo-react-test-ajayfresholives.c9users.io/go', {
+        fetch('http://localhost:8000/go', {
             // mode: 'no-cors',
             method: 'GET',
             headers: {
@@ -39,7 +39,7 @@ class CreateItem extends Component {
                 this.setState({
                     image: response, //JSON.parse(response)
                 });
-                console.log(this.state.image.canApprove);
+                // console.log(this.state.image.canApprove);
                 //console.log(image);
                 //console.log(this.state.image); // returns empty string
                 //console.log(JSON.stringify(this.state.image));
@@ -66,6 +66,7 @@ class CreateItem extends Component {
 
         return (
             <Container>
+                <Link to="/react/packages/:type"> Packages </Link>
                 <h1>Image List</h1>
 
                 <Grid.Row>{images}</Grid.Row>
